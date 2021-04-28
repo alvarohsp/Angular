@@ -7,11 +7,25 @@ CadastroController.$inject = ['$location', 'CursoService', '$routeParams'];
         vm.cliente = {id: ""}
         vm.idCliente = undefined
         vm.textoBotao = 'Cadastrar'
+        vm.botaoEstilo = 'cadastro'
+
+        vm.$onInit = function(){
+            console.log(vm.botaoEstilo)
+            
+            if(vm.textoBotao == 'Cadastrar'){
+                vm.botaoEstilo = 'cadastro'
+            }else if(vm.textoBotao == 'Editar'){
+                vm.botaoEstilo = 'editCadastro'
+            }
+    
+        }
+
 
         if ($routeParams.idCliente){
             vm.idCliente = $routeParams.idCliente
             buscarId(vm.idCliente)
             vm.textoBotao = 'Editar'
+            vm.botaoEstilo = 'editCadastro'
         }
 
         vm.navegar = function(rota){

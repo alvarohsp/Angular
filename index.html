@@ -12,6 +12,7 @@
         crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="curso-styles.css">
     <script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -33,18 +34,25 @@
 </head>
 <body>
 
-  <div class="container">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <label class="navbar-brand">Angular</label>     
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" ng-controller="MenuController as vm">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item" ng-repeat="item in vm.itensMenu">
-              <a ng-class="item.class" ng-click="vm.navegar(item.titulo, vm.itensMenu)">{{item.titulo}}</a>
-            </li>
-           </ul>
-        </div>
-      </nav>
+  <div class="hNav header">      
+      <div ng-controller="MenuController as vm">
+        <ul>
+          <li>
+            <label class="tituloProjeto">Angular JS</label>
+          </li>
+          <li ng-repeat="item in vm.itensMenu">
+            <a ng-class="item.class" ng-click="vm.navegar(item.titulo, vm.itensMenu)">{{item.titulo}}</a>
+          </li>
+          <li style="float: right">
+            <a ng-click="vm.about()">Sobre</a>
+          </li>
+         </ul>
+      </div>
+    </div>
+
+
     <div ng-view></div>
-  </div>
+
 </body>
 </html>
+

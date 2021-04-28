@@ -1,6 +1,7 @@
+<div class="homepage">
 <h1>{{vm.teste}}</h1>
 
-<div class="container">
+<div class="cadastroBox" >
     <form>
         <div class="form-group">
             <label for="nome">Nome do cliente:</label>
@@ -11,7 +12,8 @@
             <input type="text" class="form-control" ng-model="vm.cliente.rg" id="rg" placeholder="000000">
         </div>
     </form>
-    <button type="button" class="btn btn-primary" ng-click="vm.cadastrar()">{{vm.textoBotao}}</button>
-    <button type="button" class="btn btn-secondary" ng-click="vm.limpar()">Limpar</button>
+    <button type="button" ng-class="vm.botaoEstilo" ng-click="vm.cadastrar()">{{vm.textoBotao}}</button>
+    <button type="button" class="clear" ng-click="vm.limpar()">Limpar</button>
 
+</div>
 </div>

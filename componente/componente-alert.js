@@ -21,14 +21,6 @@ angular.module('app').component('alertUser', {
         }
 
 
-        
-
-
-        vm.alert = [
-            {type: 'Error', class: 'alert alert-danger'},
-            {type: 'Sucess', class: 'alert alert-success'}
-        ]
-
         }
     
 })

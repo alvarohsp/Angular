@@ -1,22 +1,23 @@
-<div ng-controller="HomeController as vm" ng-init="vm.init()">
+<div class="homepage" ng-controller="HomeController as vm" ng-init="vm.init()">
 
     <div class="container" ng-if="vm.erro">
         <alert-user msg="'A conexão com o bando de dados falhou'" tipo="'error'"></alert-user>
       </div>
 
-    <h1 id="h1T" ng-model="vm.teste">{{vm.teste}}</h1>
-
-    <label for="exampleDataList" class="form-label">Buscar Cliente</label>
-    <input class="form-control" list="datalistOptions" ng-model="vm.filtroPesquisa" id="exampleDataList" placeholder="Nome do cliente">
-
-    <table class="table" ng-if="vm.clientes">
+    <h1>Banco de dados</h1>
+    <h4 ng-model="vm.teste">{{vm.teste}}</h4>
+    <div class="searchBox">
+        <label for="exampleDataList" class="searchLabel">Buscar Cliente</label>
+        <input class="form-control" list="datalistOptions" ng-model="vm.filtroPesquisa" id="exampleDataList" placeholder="Nome do cliente">
+    </div>
+    <table class="tableS" ng-if="vm.clientes">
         <thead>
         <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Nome</th>
-            <th scope="col">RG</th>
-            <th scope="col"></th>
-            <th scope="col"></th>
+            <th class ="tableTitle" scope="col">ID</th>
+            <th class ="tableTitle" scope="col">Nome</th>
+            <th class ="tableTitle" scope="col">RG</th>
+            <th class ="tableTitle" scope="col"></th>
+            <th class ="tableTitle" scope="col"></th>
         </tr>
         </thead>
         <tbody>
@@ -24,13 +25,13 @@
             <th scope="row">{{cliente.id}}</th>
             <td>{{cliente.nome}}</td>
             <td>{{cliente.rg}}</td>
-            <td style="width:20%">
-                <button type="button" class="btn btn-outline-warning" ng-click="vm.editar(cliente.id)">
+            <td style="width:10%">
+                <button type="button" class="edit" ng-click="vm.editar(cliente.id)">
                     Editar
                 </button>
             </td>
-            <td style="width:20%">
-                <button type="button" class="btn btn-outline-danger" ng-click="vm.excluir(cliente.id)">
+            <td style="width:10%">
+                <button type="button" class="del" ng-click="vm.excluir(cliente.id)">
                     Excluir
                 </button>
             </td>
