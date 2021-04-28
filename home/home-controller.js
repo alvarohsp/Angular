@@ -17,13 +17,12 @@ HomeController.$inject = ['$location', 'CursoService'];
 
         vm.listarClientes = function(){
             CursoService.exec_GET().then(function(resposta){
-                if (resposta != ''){
+                if (resposta){
                     vm.clientes = resposta;
-                    console.log(resposta);
-                    //document.getElementById("h1T").innerHTML = vm.clientes.length + " clientes encontrados!"
                     vm.teste = vm.clientes.length + " clientes encontrados!";
                 }else{
-                    vm.teste = "Nenhum cliente foi encontrado";
+                    vm.erro = true
+                    
                 }
             })
         }

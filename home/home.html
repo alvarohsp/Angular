@@ -1,9 +1,13 @@
 <div ng-controller="HomeController as vm" ng-init="vm.init()">
-    <div class="alert alert-danger" role="alert" ng-if="vm.erro">
-        Sem conexão com o bando de dados!
-    </div>
+
+    <div class="container" ng-if="vm.erro">
+        <alert-user msg="'A conexão com o bando de dados falhou'" tipo="'error'"></alert-user>
+      </div>
 
     <h1 id="h1T" ng-model="vm.teste">{{vm.teste}}</h1>
+
+    <label for="exampleDataList" class="form-label">Buscar Cliente</label>
+    <input class="form-control" list="datalistOptions" ng-model="vm.filtroPesquisa" id="exampleDataList" placeholder="Nome do cliente">
 
     <table class="table" ng-if="vm.clientes">
         <thead>
@@ -16,7 +20,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="cliente in vm.clientes | orderBy : 'nome'">
+        <tr ng-repeat="cliente in vm.clientes | filter : vm.filtroPesquisa">
             <th scope="row">{{cliente.id}}</th>
             <td>{{cliente.nome}}</td>
             <td>{{cliente.rg}}</td>
