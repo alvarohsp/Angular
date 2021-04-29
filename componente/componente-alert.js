@@ -4,6 +4,7 @@ angular.module('app').component('alertUser', {
         msg: '=',
         tipo: '='
     },
+    
     controllerAs: 'vm',
     controller: function(){
         vm = this;
@@ -19,8 +20,5 @@ angular.module('app').component('alertUser', {
             }
     
         }
-
-
-        }
-    
+    }  
 })

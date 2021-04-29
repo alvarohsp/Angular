@@ -2,40 +2,40 @@
 
     <div class="container" ng-if="vm.erro">
         <alert-user msg="'A conexão com o bando de dados falhou'" tipo="'error'"></alert-user>
-      </div>
+    </div>
 
     <h1>Banco de dados</h1>
-    <h4 ng-model="vm.teste">{{vm.teste}}</h4>
+    <h4 ng-model="vm.nClientes">{{vm.nClientes}}</h4>
     <div class="searchBox">
         <label for="exampleDataList" class="searchLabel">Buscar Cliente</label>
         <input class="form-control" list="datalistOptions" ng-model="vm.filtroPesquisa" id="exampleDataList" placeholder="Nome do cliente">
     </div>
     <table class="tableS" ng-if="vm.clientes">
         <thead>
-        <tr>
-            <th class ="tableTitle" scope="col">ID</th>
-            <th class ="tableTitle" scope="col">Nome</th>
-            <th class ="tableTitle" scope="col">RG</th>
-            <th class ="tableTitle" scope="col"></th>
-            <th class ="tableTitle" scope="col"></th>
-        </tr>
+            <tr>
+                <th class ="tableTitle" scope="col">ID</th>
+                <th class ="tableTitle" scope="col">Nome</th>
+                <th class ="tableTitle" scope="col">CPF</th>
+                <th class ="tableTitle" scope="col"></th>
+                <th class ="tableTitle" scope="col"></th>
+            </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="cliente in vm.clientes | filter : vm.filtroPesquisa">
-            <th scope="row">{{cliente.id}}</th>
-            <td>{{cliente.nome}}</td>
-            <td>{{cliente.rg}}</td>
-            <td style="width:10%">
-                <button type="button" class="edit" ng-click="vm.editar(cliente.id)">
-                    Editar
-                </button>
-            </td>
-            <td style="width:10%">
-                <button type="button" class="del" ng-click="vm.excluir(cliente.id)">
-                    Excluir
-                </button>
-            </td>
-        </tr>
+            <tr ng-repeat="cliente in vm.clientes | filter : vm.filtroPesquisa">
+                <th scope="row">{{cliente.id}}</th>
+                <td>{{cliente.nome}}</td>
+                <td>{{cliente.cpf}}</td>
+                <td style="width:10%">
+                    <button type="button" class="edit" ng-click="vm.editar(cliente.id)">
+                        Editar
+                    </button>
+                </td>
+                <td style="width:10%">
+                    <button type="button" class="del" ng-click="vm.excluir(cliente.id)">
+                        Excluir
+                    </button>
+                </td>
+            </tr>
         </tbody>
     </table>
 </div>

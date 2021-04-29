@@ -2,28 +2,23 @@
   "clientes": [
     {
       "id": 1,
-      "nome": "Álvaro Henrique",
-      "rg": "15408151700"
+      "nome": "Álvaro Pandeló",
+      "cpf": "15408151700"
     },
     {
       "id": 2,
-      "nome": "Tae",
-      "rg": "000123"
+      "nome": "Matheus",
+      "cpf": "012345678910"
     },
     {
       "id": 3,
-      "nome": "Marcos",
-      "rg": "144444444"
+      "cpf": "045345678910",
+      "nome": "Sandro"
     },
     {
       "id": 4,
-      "nome": "Matheus Santos",
-      "rg": "963258741"
-    },
-    {
-      "id": 5,
-      "nome": "Hackathon",
-      "rg": "2021"
+      "nome": "Lucas",
+      "cpf": "0112345678910"
     }
   ]
 }

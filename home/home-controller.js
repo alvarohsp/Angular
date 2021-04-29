@@ -4,7 +4,7 @@ HomeController.$inject = ['$location', 'CursoService'];
     function HomeController($location, CursoService){
         /// DECLARAÇÃO DE VARIAVEIS
         vm = this;
-        vm.teste = 'Home'
+        vm.nClientes = 'Home'
         vm.clientes = ''
         vm.erro = false
 
@@ -25,11 +25,11 @@ HomeController.$inject = ['$location', 'CursoService'];
 
                     /// CONTAGEM DO NÚMERO DE CLIENTES PARA EXIBIR NA LABEL
                     if (resposta.length > '1'){
-                        vm.teste = vm.clientes.length + " clientes encontrados!";
+                        vm.nClientes = vm.clientes.length + " clientes encontrados!";
                     }else if(resposta.length == '1'){
-                        vm.teste = vm.clientes.length + " cliente encontrado!";
+                        vm.nClientes = vm.clientes.length + " cliente encontrado!";
                     }else{
-                        vm.teste = "Nenhum cliente foi encontrado!";
+                        vm.nClientes = "Nenhum cliente foi encontrado!";
                     }
 
                 /// ERRO NA LISTAGEM DE CLIENTES
@@ -51,6 +51,5 @@ HomeController.$inject = ['$location', 'CursoService'];
        /// EDITAR CLIENTE
        vm.editar = function(id){
             vm.navegar('Cadastro', id)
-
        }
     }
