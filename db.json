@@ -2,48 +2,28 @@
   "clientes": [
     {
       "id": 1,
-      "nome": "alvarohsp",
-      "rg": "123"
-    },
-    {
-      "id": 2,
-      "nome": "tae",
-      "rg": "556000"
-    },
-    {
-      "id": 3,
-      "nome": "XAU",
-      "rg": "00"
-    },
-    {
-      "id": 4,
-      "nome": "Álvaro Henrique Pandeló da Silva",
+      "nome": "Álvaro Henrique",
       "rg": "15408151700"
     },
     {
+      "id": 2,
+      "nome": "Tae",
+      "rg": "000123"
+    },
+    {
+      "id": 3,
+      "nome": "Marcos",
+      "rg": "144444444"
+    },
+    {
+      "id": 4,
+      "nome": "Matheus Santos",
+      "rg": "963258741"
+    },
+    {
       "id": 5,
-      "nome": "123 Testando um nome muito gigantesco 123",
-      "rg": "11111222277777"
-    },
-    {
-      "id": 6,
-      "nome": "asdasdasd",
-      "rg": "4444"
-    },
-    {
-      "id": 7,
-      "nome": "iiiiiiiiiii",
-      "rg": "4050"
-    },
-    {
-      "id": 8,
-      "nome": "asdvfgt",
-      "rg": "0045"
-    },
-    {
-      "nome": "TAE-TANNN",
-      "rg": "963258741",
-      "id": 9
+      "nome": "Hackathon",
+      "rg": "2021"
     }
   ]
 }

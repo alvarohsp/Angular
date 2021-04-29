@@ -74,13 +74,16 @@ ul {
 li {
     float: left;
 }
-li a {
+li a,a.linkG {
     display: block;
     text-align: center;
     padding: 14px 16px;
     background-color: #333;
     text-decoration: none;
+    color: white;
 }
+
+
 
 li a:hover {
     background-color: #111;
